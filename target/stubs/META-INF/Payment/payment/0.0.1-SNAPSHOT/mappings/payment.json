@@ -1,0 +1,21 @@
+{
+  "id" : "7811d2f2-98f3-409e-8486-0ac480070864",
+  "request" : {
+    "urlPath" : "/payment",
+    "method" : "GET",
+    "queryParameters" : {
+      "userID" : {
+        "equalTo" : "1"
+      },
+      "price" : {
+        "equalTo" : "250"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "body" : "success",
+    "transformers" : [ "response-template" ]
+  },
+  "uuid" : "7811d2f2-98f3-409e-8486-0ac480070864"
+}
