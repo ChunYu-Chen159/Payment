@@ -1,5 +1,5 @@
 {
-  "id" : "7811d2f2-98f3-409e-8486-0ac480070864",
+  "id" : "eab6f8b9-ef42-4a4a-87fe-5f98bd5b048e",
   "request" : {
     "urlPath" : "/payment",
     "method" : "GET",
@@ -17,5 +17,5 @@
     "body" : "success",
     "transformers" : [ "response-template" ]
   },
-  "uuid" : "7811d2f2-98f3-409e-8486-0ac480070864"
+  "uuid" : "eab6f8b9-ef42-4a4a-87fe-5f98bd5b048e"
 }
