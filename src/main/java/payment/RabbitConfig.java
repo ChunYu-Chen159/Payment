@@ -1,5 +1,5 @@
 /*
-package payment;
+package ordering;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -15,7 +15,7 @@ public class RabbitConfig {
     // Exchange -> FanoutExchange
     @Bean
     public FanoutExchange fanout() {
-        return new FanoutExchange("payment.fanout");
+        return new FanoutExchange("ordering.fanout");
     }
 
     // 只要這邊有定義@Bean，Rabbitmq上就會有queue產生
