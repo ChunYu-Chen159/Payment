@@ -4,7 +4,7 @@ import org.springframework.cloud.contract.spec.Contract
 [
     Contract.make {
         description ("payment Contract")
-        name ("payment")
+        name ("ordering_payment")
         request {
             method ("GET")
             url("/payment") {
