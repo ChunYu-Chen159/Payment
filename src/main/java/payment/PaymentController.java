@@ -30,9 +30,10 @@ public class PaymentController {
 	@ApiOperation(value = "模擬500", notes = "回傳500")
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value="/simulate500", method = RequestMethod.GET)
-	public ResponseEntity<Payment> simulate500()
+	public String simulate500()
 	{
-		return ResponseEntity.status(500).build();
+		int i=5/0;
+		return "ex";
 	}
 
 	// 模擬404
