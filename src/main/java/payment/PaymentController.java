@@ -25,6 +25,16 @@ public class PaymentController {
 		return number % 2 == 0 ? "Even" : "Odd";
 	}
 
+
+	// 模擬404
+	@ApiOperation(value = "模擬500", notes = "回傳500")
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value="/simulate500", method = RequestMethod.GET)
+	public ResponseEntity<Payment> simulate500()
+	{
+		return ResponseEntity.status(500).build();
+	}
+
 	// 模擬404
 	@ApiOperation(value = "模擬404", notes = "回傳404")
 	@CrossOrigin(origins = "*")
