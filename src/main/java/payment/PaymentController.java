@@ -65,7 +65,7 @@ public class PaymentController {
 		return result;
 	}*/
 	
-	@ApiOperation(value = "測試此伺服器是否成功連線", notes = "成功連線就回傳success")
+/*	@ApiOperation(value = "測試此伺服器是否成功連線", notes = "成功連線就回傳success")
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	//@Scheduled(fixedDelay = 1000, initialDelay = 500)
@@ -77,7 +77,7 @@ public class PaymentController {
 		//rabbitTemplate.convertAndSend(dateQueue.getName(), context);
 //		rabbitTemplate.convertAndSend(fanout.getName(),"", context);
     	return "success";
-    }
+    }*/
 
 	
 	@ApiOperation(value = "購買物品", notes = "成功購買就回傳success")
