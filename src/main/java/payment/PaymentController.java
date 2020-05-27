@@ -20,7 +20,7 @@ public class PaymentController {
 //	private FanoutExchange fanout; // configured in RabbitConfig
 
 
-	@RequestMapping(value="/simulateError", method = RequestMethod.GET)
+/*	@RequestMapping(value="/simulateError", method = RequestMethod.GET)
 	public String isNumberPrime_payment(@RequestParam("number") Integer number) {
 		return number % 2 == 0 ? "Even" : "Odd";
 	}
@@ -63,7 +63,7 @@ public class PaymentController {
 			e.printStackTrace();
 		}
 		return result;
-	}
+	}*/
 	
 	@ApiOperation(value = "測試此伺服器是否成功連線", notes = "成功連線就回傳success")
 	@CrossOrigin(origins = "*")
