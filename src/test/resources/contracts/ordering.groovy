@@ -9,7 +9,7 @@ import org.springframework.cloud.contract.spec.Contract
             method ("GET")
             url("/payment") {
                 queryParameters {
-                    parameter("userID", 1)
+                    parameter("userID", "1")
                     parameter("price", "250")
                 }
             }
