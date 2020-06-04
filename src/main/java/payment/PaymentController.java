@@ -83,10 +83,10 @@ public class PaymentController {
 	@ApiOperation(value = "購買物品", notes = "成功購買就回傳success")
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "payment", method = RequestMethod.GET)
-    public String payment(@ApiParam(required = true, name = "userID", value = "使用者ID")@RequestParam("userID") String userID, @ApiParam(required = true, name = "price", value = "付款金額")@RequestParam("price") String price)
+    public String payment(@ApiParam(required = true, name = "userID", value = "使用者ID")@RequestParam("userID") int userID, @ApiParam(required = true, name = "price", value = "付款金額")@RequestParam("price") String price)
     {
-		int temp = Integer.parseInt(userID);
-		return temp % 2 == 1 ? "success" : "fail";
+		//int temp = Integer.parseInt(userID);
+		return userID % 2 == 1 ? "success" : "fail";
     	//return "success";
     }
 	
