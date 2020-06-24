@@ -86,14 +86,10 @@ public class PaymentController {
     public String payment(@ApiParam(required = true, name = "userID", value = "使用者ID")@RequestParam("userID") String userID, @ApiParam(required = true, name = "price", value = "付款金額")@RequestParam("price") String price)
     {
 
-		int temp = 0;
-		try {
 
-			temp = Integer.parseInt(userID);
-			return temp % 2 == 1 ? "success" : "fail";
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+
+
+	    int temp = Integer.parseInt(userID);
 		return temp % 2 == 1 ? "success" : "fail";
     	//return "success";
     }
