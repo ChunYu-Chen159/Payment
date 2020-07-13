@@ -35,21 +35,5 @@ import org.springframework.cloud.contract.spec.Contract
             body("success")
             status (200)
         }
-    },
-    Contract.make {
-        description ("payment Contract")
-        name ("ordering_payment3")
-        request {
-            method ("GET")
-            url ("/payment") {
-                queryParameters {
-                    parameter("userID","")
-                    parameter("price","250")
-                }
-            }
-        }
-        response {
-            status(200)
-        }
     }
 ]
