@@ -32,7 +32,7 @@ import org.springframework.cloud.contract.spec.Contract
             }
         }
         response {
-            body("succe")
+            body("success")
             status (200)
         }
     }
