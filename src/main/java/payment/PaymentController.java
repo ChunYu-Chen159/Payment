@@ -1,10 +1,13 @@
 package payment;
 
+import com.soselab.vmamvserviceclient.annotation.FeignRequest;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import payment.feign.OrderingInterface;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -13,6 +16,9 @@ import java.util.Date;
 @Api(value = "PaymentController", tags = "與付錢相關的所有一切都在這裡")
 @RestController
 public class PaymentController {
+
+	@Autowired
+	OrderingInterface orderingInterface;
 
 //	@Autowired
 //	private AmqpTemplate rabbitTemplate;
@@ -90,6 +96,18 @@ public class PaymentController {
 		return temp % 2 == 1 ? "success" : "fail";*/
     	return "success";
     }
+
+	@FeignRequest(client = OrderingInterface.class, method = "getSomething", parameterTypes = String.class)
+	@ApiOperation(value = "拿東西", notes = "拿東西")
+	@CrossOrigin(origins = "*")
+	@RequestMapping(value = "/getSomething", method = RequestMethod.GET)
+	public String getSomething(@ApiParam(required = true, name = "userID", value = "使用者編號") @RequestParam("userID") String userID)
+	{
+		String data = "";
+
+		return orderingInterface.getSomething(userID);
+
+	}
 	
 	
 }
