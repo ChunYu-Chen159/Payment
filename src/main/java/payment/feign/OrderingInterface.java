@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @TargetVersion("0.0.1-SNAPSHOT")
 public interface OrderingInterface {
 
-    @RequestMapping(value = "/getPaymentInformation", method = RequestMethod.GET)
-    String getPaymentInformation(@RequestParam("userID") String userID);
+/*    @RequestMapping(value = "/getPaymentInformation", method = RequestMethod.GET)
+    String getPaymentInformation(@RequestParam("userID") String userID);*/
 
 }

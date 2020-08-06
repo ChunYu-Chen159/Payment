@@ -27,65 +27,6 @@ public class PaymentController {
 //	private FanoutExchange fanout; // configured in RabbitConfig
 
 
-/*	@RequestMapping(value="/simulateError", method = RequestMethod.GET)
-	public String isNumberPrime_payment(@RequestParam("number") Integer number) {
-		return number % 2 == 0 ? "Even" : "Odd";
-	}
-
-
-	// 模擬404
-	@ApiOperation(value = "模擬500", notes = "回傳500")
-	@CrossOrigin(origins = "*")
-	@RequestMapping(value="/simulate500", method = RequestMethod.GET)
-	public String simulate500()
-	{
-		int i=5/0;
-		return "ex";
-	}
-
-	// 模擬404
-	@ApiOperation(value = "模擬404", notes = "回傳404")
-	@CrossOrigin(origins = "*")
-	@RequestMapping(value="/index2", method = RequestMethod.GET)
-	public ResponseEntity<Payment> index2()
-	{
-
-		return ResponseEntity.notFound().build();
-	}
-
-	// 模擬回應
-	@ApiOperation(value = "模擬延遲", notes = "回應延遲")
-	@CrossOrigin(origins = "*")
-	@RequestMapping(value="/index3", method = RequestMethod.GET)
-	public String index3()
-	{
-
-		String result = "wait success";
-
-
-		long num = (long)(Math.random() * 30);
-		try {
-			Thread.sleep(num);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
-		return result;
-	}*/
-	
-/*	@ApiOperation(value = "測試此伺服器是否成功連線", notes = "成功連線就回傳success")
-	@CrossOrigin(origins = "*")
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	//@Scheduled(fixedDelay = 1000, initialDelay = 500)
-//	@RabbitPublisher("date")
-    public String index() 
-    {
-		String context = "now date ".concat(new SimpleDateFormat("yyyy-MM-dd HH:mm:dd").format(new Date()));
-		System.out.println("Sender : " + context);
-		//rabbitTemplate.convertAndSend(dateQueue.getName(), context);
-//		rabbitTemplate.convertAndSend(fanout.getName(),"", context);
-    	return "success";
-    }*/
-
 	
 	@ApiOperation(value = "購買物品", notes = "成功購買就回傳success")
 	@CrossOrigin(origins = "*")
@@ -97,7 +38,7 @@ public class PaymentController {
     	return "success";
     }
 
-	@FeignRequest(client = OrderingInterface.class, method = "getPaymentInformation", parameterTypes = String.class)
+/*	@FeignRequest(client = OrderingInterface.class, method = "getPaymentInformation", parameterTypes = String.class)
 	@ApiOperation(value = "拿資訊", notes = "拿資訊")
 	@CrossOrigin(origins = "*")
 	@RequestMapping(value = "/getPaymentInformation", method = RequestMethod.GET)
@@ -114,7 +55,7 @@ public class PaymentController {
 		}
 
 
-	}
+	}*/
 	
 	
 }
